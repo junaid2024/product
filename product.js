@@ -14,11 +14,13 @@ function add() {
     if (product.id in localStorage) {
         alert("Already added");
         document.getElementById("myForm").reset(); 
+        
 
     } else {
         localStorage.setItem(product.id, JSON.stringify(product));
         console.log(product);
         alert('Added successfully');
+        document.getElementById("myForm").reset();
     }
 }
 
